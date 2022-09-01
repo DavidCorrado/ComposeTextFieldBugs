@@ -1,6 +1,9 @@
 package com.example.myapplication
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
@@ -18,12 +21,10 @@ fun TextFieldWithBottomBarWorking() {
         },
         bottomBar = {
             BottomAppBar(modifier = Modifier
-                .fillMaxWidth()
-                .wrapContentHeight()) {
+                .fillMaxWidth()) {
                 Button(
                     onClick = {  },
                     modifier = Modifier
-                        .padding(horizontal = 20.dp)
                         .fillMaxWidth()
                 ) {
                     Text(text = "Bottom")
@@ -36,7 +37,7 @@ fun TextFieldWithBottomBarWorking() {
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())) {
             repeat(20) { index ->
-                AppTextField(label = { Text("Test${index+1}") })
+                AppTextField(label = { Text("Test${index + 1}") })
             }
         }
     }
