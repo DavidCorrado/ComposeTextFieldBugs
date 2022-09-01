@@ -19,12 +19,13 @@ fun AppTextField(modifier: Modifier = Modifier, label: @Composable (() -> Unit)?
 
     OutlinedTextField(label = label, modifier = modifier, value = text.value,
         onValueChange = { text.value = it },
-    singleLine = false,
+        singleLine = false,
         keyboardActions = KeyboardActions(
             onDone = {
                 softwareKeyboardController?.hide()
             }
         ),
-        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),//TODO handle next and done for last
-    maxLines = 1)
+        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
+        maxLines = 1
+    )
 }
