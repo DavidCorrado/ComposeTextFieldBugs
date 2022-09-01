@@ -36,7 +36,7 @@ fun TextFieldWithBottomBarWorking() {
             .fillMaxWidth()
             .verticalScroll(rememberScrollState())) {
             repeat(20) { index ->
-                AppTextField(label = { Text("Test$index") })
+                AppTextField(label = { Text("Test${index+1}") })
             }
         }
     }
