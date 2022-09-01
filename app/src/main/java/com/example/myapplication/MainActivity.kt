@@ -12,7 +12,8 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             MyApplicationTheme {
-                TextFieldWithOutBottomBarWorking()
+                //TextFieldWithOutBottomBarWorking()
+                TextFieldWithBottomBarWorking()
             }
         }
     }

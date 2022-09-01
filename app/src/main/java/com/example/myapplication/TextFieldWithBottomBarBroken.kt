@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun TextFieldWithBottomBarBroken() {
+fun TextFieldWithBottomBarWorking() {
     Scaffold(
         topBar = {
             TopAppBar {
@@ -33,6 +33,7 @@ fun TextFieldWithBottomBarBroken() {
         }) { paddingValues ->
         Column(modifier = Modifier
             .padding(paddingValues)
+            .fillMaxWidth()
             .verticalScroll(rememberScrollState())) {
             repeat(20) { index ->
                 AppTextField(label = { Text("Test$index") })
